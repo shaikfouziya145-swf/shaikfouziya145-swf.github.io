@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>S Fouziya | AI/ML Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f2f5fa; --surface:#ffffff; --ink:#18212f; --muted:#5a6679; --line:#d3dbe7;
+  --accent:#3955d6; --accent-ink:#ffffff; --code-bg:#eaeff7; --out:#0f7a4f;
+  --sans:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e141e; --surface:#161e2b; --ink:#e7edf7; --muted:#9aa7bb; --line:#2a3547;
+    --accent:#7d93ff; --accent-ink:#0e141e; --code-bg:#1d2736; --out:#5fd3a0; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e141e; --surface:#161e2b; --ink:#e7edf7; --muted:#9aa7bb; --line:#2a3547;
+  --accent:#7d93ff; --accent-ink:#0e141e; --code-bg:#1d2736; --out:#5fd3a0; color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:1.0625rem;line-height:1.6}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+main{max-width:46rem;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+nav{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;margin-bottom:2.5rem;font-size:.95rem}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--accent)}
+h1{font-size:clamp(2.6rem,9vw,4.5rem);line-height:1;font-weight:800;letter-spacing:-.03em;margin:0 0 1.25rem}
+h2{font-size:1.5rem;font-weight:600;letter-spacing:-.01em;margin:3.5rem 0 1rem}
+h3{font-size:1.2rem;font-weight:600;margin:0 0 .35rem}
+p{margin:0 0 1rem;max-width:62ch}
+.cell{display:grid;grid-template-columns:4.2rem 1fr;border:1px solid var(--line);background:var(--surface);border-radius:6px;margin-bottom:1rem;overflow:hidden}
+.gutter{font-family:var(--mono);font-size:.8rem;color:var(--muted);padding:.9rem .6rem;border-right:1px solid var(--line);background:var(--code-bg);text-align:right}
+.body{padding:.9rem 1.1rem;min-width:0}
+.code{font-family:var(--mono);font-size:.9rem;overflow-x:auto;white-space:pre;margin:0}
+.code .k{color:var(--accent)}
+.out{font-family:var(--mono);font-size:.9rem;color:var(--out);margin-top:.6rem;min-height:1.6em;white-space:pre-wrap}
+.caret{display:inline-block;width:.55ch;height:1.1em;background:var(--out);vertical-align:text-bottom;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.lead{font-size:1.25rem;max-width:34ch;margin:1.5rem 0 1.25rem}
+.links{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-block;padding:.6rem 1.1rem;border-radius:6px;font-weight:600;text-decoration:none;border:1px solid var(--accent);color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn:hover{filter:brightness(1.1)}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 0;padding:0;list-style:none}
+.tags li{font-family:var(--mono);font-size:.8rem;padding:.15rem .55rem;border:1px solid var(--line);border-radius:4px;color:var(--muted)}
+.proj .body p{margin-bottom:.5rem}
+.skills{display:grid;grid-template-columns:8.5rem 1fr;gap:.6rem 1rem;margin:0}
+.skills dt{font-weight:600}.skills dd{margin:0;color:var(--muted)}
+footer{margin-top:4rem;color:var(--muted);font-size:.9rem}
+@media (max-width:34rem){
+  .cell{grid-template-columns:1fr}
+  .gutter{text-align:left;border-right:0;border-bottom:1px solid var(--line);padding:.4rem .9rem}
+  .skills{grid-template-columns:1fr;gap:0}.skills dd{margin-bottom:.7rem}
+}
+@media (prefers-reduced-motion:reduce){.caret{animation:none}}
+</style>
+</head>
+<body>
+<main>
+<nav aria-label="Sections">
+  <a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#certificates">Certificates</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+</nav>
+
+<header>
+  <h1>S Fouziya</h1>
+  <div class="cell" aria-label="Introduction">
+    <div class="gutter">In [1]:</div>
+    <div class="body">
+      <pre class="code"><span class="k">print</span>(fouziya.role)</pre>
+      <div class="out" id="out" aria-live="polite"><span id="typed">BCA Honours (Computer Applications) student building AI and machine learning projects.</span><span class="caret" id="caret" aria-hidden="true"></span></div>
+    </div>
+  </div>
+  <p class="lead">I train models, test them against real data, and turn them into tools people can use.</p>
+  <div class="links">
+    <a class="btn primary" href="https://github.com/shaikfouziya145-swf">View my GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/shaik-fouziya-386a92369">LinkedIn</a>
+    <a class="btn" href="mailto:shaikfouziya1437@gmail.com">Email me</a>
+  </div>
+</header>
+
+<section id="projects" aria-labelledby="h-projects">
+  <h2 id="h-projects">Projects</h2>
+
+  <article class="cell proj">
+    <div class="gutter">In [2]:</div>
+    <div class="body">
+      <h3>BizBot: AI sales analytics chatbot</h3>
+      <p>A chatbot that analyzes sales data, calculates profit, loss and tax, and creates charts on request.</p>
+      <p><a href="https://github.com/shaikfouziya145-swf/bizbot">Source code on GitHub</a></p>
+    </div>
+  </article>
+
+  <article class="cell proj">
+    <div class="gutter">In [3]:</div>
+    <div class="body">
+      <h3>Breast cancer detection</h3>
+      <p>Compares six machine-learning algorithms (Logistic Regression, LDA, KNN, Decision Tree, Naive Bayes and SVM) with 10-fold cross-validation to classify tumors as benign or malignant.</p>
+      <ul class="tags"><li>Python</li><li>Scikit-learn</li><li>Cross-validation</li></ul>
+      <p><a href="https://github.com/shaikfouziya145-swf/breast-cancer-detection">Source code on GitHub</a></p>
+    </div>
+  </article>
+
+  <article class="cell proj">
+    <div class="gutter">In [4]:</div>
+    <div class="body">
+      <h3>Car price prediction</h3>
+      <p>A Random Forest regression model that predicts car prices from 14 numeric specifications such as engine size, horsepower and weight. It reaches an R² score of 91% on test data.</p>
+      <ul class="tags"><li>Python</li><li>Random Forest</li><li>Regression</li></ul>
+      <p><a href="https://github.com/shaikfouziya145-swf/car-price-prediction">Source code on GitHub</a></p>
+    </div>
+  </article>
+
+  <article class="cell proj">
+    <div class="gutter">In [5]:</div>
+    <div class="body">
+      <h3>Digit recognition</h3>
+      <p>A Random Forest classifier trained on 42,000 labelled 28 by 28 pixel digit images. It reaches 96.3% accuracy on unseen test images.</p>
+      <ul class="tags"><li>Python</li><li>Random Forest</li><li>Image classification</li></ul>
+      <p><a href="https://github.com/shaikfouziya145-swf/digit-recognition">Source code on GitHub</a></p>
+    </div>
+  </article>
+
+  <article class="cell proj">
+    <div class="gutter">In [6]:</div>
+    <div class="body">
+      <h3>Face recognition</h3>
+      <p>A system that recognizes faces from images.</p>
+      <ul class="tags"><li>Computer vision</li><li>Face data</li></ul>
+    </div>
+  </article>
+
+  <article class="cell proj">
+    <div class="gutter">In [7]:</div>
+    <div class="body">
+      <h3>Emotion recognition</h3>
+      <p>A real-time app that reads webcam video and labels each face’s emotion, built with OpenCV and a pre-trained emotion recognition library.</p>
+      <ul class="tags"><li>Python</li><li>OpenCV</li><li>Real-time</li></ul>
+      <p><a href="https://github.com/shaikfouziya145-swf/emotion-recognition">Source code on GitHub</a></p>
+    </div>
+  </article>
+
+  <article class="cell proj">
+    <div class="gutter">In [8]:</div>
+    <div class="body">
+      <h3>Object recognition</h3>
+      <p>A model that identifies objects in images.</p>
+      <ul class="tags"><li>Computer vision</li><li>Classification</li></ul>
+    </div>
+  </article>
+
+  <article class="cell proj">
+    <div class="gutter">In [9]:</div>
+    <div class="body">
+      <h3>Snake game</h3>
+      <p>A playable version of the classic snake game.</p>
+      <ul class="tags"><li>Game development</li></ul>
+    </div>
+  </article>
+
+  <p>More practice notebooks: house price, exam marks, salary and stock prediction, Titanic survival, and clustering.</p>
+</section>
+
+<section id="experience" aria-labelledby="h-exp">
+  <h2 id="h-exp">Experience</h2>
+  <h3>Machine Learning Intern, Pantech Prolabs India</h3>
+  <p>Completed a 30-day machine learning internship in October 2026, applying it by building AI and ML projects.</p>
+  <h3>Python Bootcamp Intern, Pantech Prolabs India</h3>
+  <p>Completed the Python Bootcamp internship in July 2026.</p>
+</section>
+
+<section id="certificates" aria-labelledby="h-cert">
+  <h2 id="h-cert">Certificates</h2>
+  <h3>AI Tools &amp; Claude Workshop, be10X</h3>
+  <p>Completed in August 2026. Covers creating presentations, analyzing data, and coding and debugging with AI tools.</p>
+</section>
+
+<section id="skills" aria-labelledby="h-skills">
+  <h2 id="h-skills">Skills</h2>
+  <dl class="skills">
+    <dt>Programming</dt><dd>Python, C, Java, R</dd>
+    <dt>Libraries</dt><dd>NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, TensorFlow/Keras, OpenCV</dd>
+    <dt>AI and ML</dt><dd>Machine learning, neural networks/deep learning, data cleaning and preprocessing, computer vision, NLP and chatbots, pre-trained models (CNNs), Hugging Face/LLM APIs, regression, classification, clustering</dd>
+    <dt>Data and tools</dt><dd>SQL/MySQL, Power BI/Tableau, Git and GitHub, Google Colab, Jupyter, Microsoft Excel</dd>
+    <dt>Web</dt><dd>HTML, CSS, PHP, APIs</dd>
+    <dt>Languages</dt><dd>English, Hindi, Telugu, Kannada, Urdu</dd>
+  </dl>
+</section>
+
+<section id="contact" aria-labelledby="h-contact">
+  <h2 id="h-contact">Contact</h2>
+  <p>Hindupur, Andhra Pradesh. Open to AI/ML internships and team projects.</p>
+  <p><a href="mailto:shaikfouziya1437@gmail.com">shaikfouziya1437@gmail.com</a><br><a href="https://github.com/shaikfouziya145-swf">github.com/shaikfouziya145-swf</a><br><a href="https://www.linkedin.com/in/shaik-fouziya-386a92369">linkedin.com/in/shaik-fouziya-386a92369</a></p>
+</section>
+
+<footer>BCA Honours (Computer Applications), Sri Krishnadevaraya University, Anantapur. Expected graduation 2027.</footer>
+</main>
+<script>
+(function(){
+  var el=document.getElementById('typed'),caret=document.getElementById('caret');
+  var full=el.textContent;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){caret.style.display='none';return;}
+  el.textContent='';var i=0;
+  setTimeout(function tick(){
+    el.textContent=full.slice(0,++i);
+    if(i<full.length){setTimeout(tick,28);}else{setTimeout(function(){caret.style.display='none';},1200);}
+  },500);
+})();
+</script>
+</body>
+</html>
